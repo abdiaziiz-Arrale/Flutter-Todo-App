@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:todo_app/Counters.dart';
 import 'package:todo_app/TodoList.dart';
 import 'package:todo_app/todoScreen.dart';
 
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-home: Tudo(),
+home: Counters(),
 
     );
   }
