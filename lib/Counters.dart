@@ -8,8 +8,9 @@ class Counters extends StatefulWidget {
   State<Counters> createState() => _CountersState();
 }
 
-var counter = 0.obs;
+
 class _CountersState extends State<Counters> {
+  final counter = 0.obs;
   @override
   void initState() {
     // TODO: implement initState
@@ -22,7 +23,7 @@ class _CountersState extends State<Counters> {
 
   @override
   Widget build(BuildContext context) {
-    var counter = 0.obs;
+
     return Scaffold(
       appBar: AppBar(),
       body: Center(
@@ -32,7 +33,7 @@ child: Obx((){
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: ()
-        {counter ++;
+        {counter.value ++;
           GetStorage().write('counter', counter.value);},
         child: Icon(Icons.add),
       ),
